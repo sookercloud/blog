@@ -118,18 +118,18 @@
 
 
 
-<meta name="description" content="一、基础概念PHP环境 编译安装PHP环境   编译配置两种写法不同之处   安装php拓展的几种方法   配置服务支持多版本php   php日志类型  PHP-FPM 什么是php-fpm   php-fpm 进程模型   php-fpm.conf 配置解读   错误日志   慢日志  PHP PHP内存模型   php.ini 解读   php 错误日志  PHP的几种运行模式PHP性能分析">
+<meta name="description" content="一、基础概念PHP环境 编译安装PHP环境   编译配置两种写法不同之处   安装php拓展的几种方法   配置服务支持多版本php   php日志类型  PHP-FPM 什么是php-fpm   php-fpm 进程模型   php-fpm.conf 配置解读   错误日志   慢日志  PHP PHP内存模型   php.ini 解读   php 错误日志  PHP的几种运行模式 FPM">
 <meta name="keywords" content="PHP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="查漏补缺之PHP">
 <meta property="og:url" content="http://blog.sooker.io/2018/07/12/使用hexo-next主题-搭建个人博客/index.html">
 <meta property="og:site_name" content="sooker 技术札记">
-<meta property="og:description" content="一、基础概念PHP环境 编译安装PHP环境   编译配置两种写法不同之处   安装php拓展的几种方法   配置服务支持多版本php   php日志类型  PHP-FPM 什么是php-fpm   php-fpm 进程模型   php-fpm.conf 配置解读   错误日志   慢日志  PHP PHP内存模型   php.ini 解读   php 错误日志  PHP的几种运行模式PHP性能分析">
+<meta property="og:description" content="一、基础概念PHP环境 编译安装PHP环境   编译配置两种写法不同之处   安装php拓展的几种方法   配置服务支持多版本php   php日志类型  PHP-FPM 什么是php-fpm   php-fpm 进程模型   php-fpm.conf 配置解读   错误日志   慢日志  PHP PHP内存模型   php.ini 解读   php 错误日志  PHP的几种运行模式 FPM">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-07-12T13:37:52.000Z">
+<meta property="og:updated_time" content="2018-07-12T13:50:27.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="查漏补缺之PHP">
-<meta name="twitter:description" content="一、基础概念PHP环境 编译安装PHP环境   编译配置两种写法不同之处   安装php拓展的几种方法   配置服务支持多版本php   php日志类型  PHP-FPM 什么是php-fpm   php-fpm 进程模型   php-fpm.conf 配置解读   错误日志   慢日志  PHP PHP内存模型   php.ini 解读   php 错误日志  PHP的几种运行模式PHP性能分析">
+<meta name="twitter:description" content="一、基础概念PHP环境 编译安装PHP环境   编译配置两种写法不同之处   安装php拓展的几种方法   配置服务支持多版本php   php日志类型  PHP-FPM 什么是php-fpm   php-fpm 进程模型   php-fpm.conf 配置解读   错误日志   慢日志  PHP PHP内存模型   php.ini 解读   php 错误日志  PHP的几种运行模式 FPM">
 
 
 
@@ -430,7 +430,38 @@
 <blockquote>
 <p>php 错误日志</p>
 </blockquote>
-<h2 id="PHP的几种运行模式"><a href="#PHP的几种运行模式" class="headerlink" title="PHP的几种运行模式"></a>PHP的几种运行模式</h2><h2 id="PHP性能分析工具"><a href="#PHP性能分析工具" class="headerlink" title="PHP性能分析工具"></a>PHP性能分析工具</h2><h2 id="PHP调试工具"><a href="#PHP调试工具" class="headerlink" title="PHP调试工具"></a>PHP调试工具</h2>
+<h2 id="PHP的几种运行模式"><a href="#PHP的几种运行模式" class="headerlink" title="PHP的几种运行模式"></a>PHP的几种运行模式</h2><blockquote>
+<p>FPM</p>
+</blockquote>
+<blockquote>
+<p>CLI</p>
+</blockquote>
+<h2 id="PHP性能分析工具"><a href="#PHP性能分析工具" class="headerlink" title="PHP性能分析工具"></a>PHP性能分析工具</h2><h2 id="PHP调试工具"><a href="#PHP调试工具" class="headerlink" title="PHP调试工具"></a>PHP调试工具</h2><blockquote>
+<p>xdebug</p>
+</blockquote>
+<blockquote>
+<p>GDB</p>
+</blockquote>
+<h2 id="GC机制"><a href="#GC机制" class="headerlink" title="GC机制"></a>GC机制</h2><h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><h3 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h3><h3 id="命名空间"><a href="#命名空间" class="headerlink" title="命名空间"></a>命名空间</h3><h3 id="SPL"><a href="#SPL" class="headerlink" title="SPL"></a>SPL</h3><h3 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h3><p>### </p>
+<h3 id="异常-错误处理"><a href="#异常-错误处理" class="headerlink" title="异常/错误处理"></a>异常/错误处理</h3><h2 id="设计模式"><a href="#设计模式" class="headerlink" title="设计模式"></a>设计模式</h2><h2 id="常见算法"><a href="#常见算法" class="headerlink" title="常见算法"></a>常见算法</h2><h2 id="psr规范"><a href="#psr规范" class="headerlink" title="psr规范"></a>psr规范</h2><h2 id="composer"><a href="#composer" class="headerlink" title="composer"></a>composer</h2><h2 id="swoole"><a href="#swoole" class="headerlink" title="swoole"></a>swoole</h2><blockquote>
+<p>tcp</p>
+</blockquote>
+<blockquote>
+<p>socket </p>
+</blockquote>
+<blockquote>
+<p>进程、线程、协程</p>
+</blockquote>
+<blockquote>
+<p>co实现思路</p>
+</blockquote>
+<blockquote>
+<p>理解yield</p>
+</blockquote>
+<blockquote>
+<p>swoole知识储备</p>
+</blockquote>
+
       
     </div>
     
@@ -600,7 +631,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、基础概念"><span class="nav-number">1.</span> <span class="nav-text">一、基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP环境"><span class="nav-number">1.1.</span> <span class="nav-text">PHP环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP-FPM"><span class="nav-number">1.2.</span> <span class="nav-text">PHP-FPM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP"><span class="nav-number">1.3.</span> <span class="nav-text">PHP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP的几种运行模式"><span class="nav-number">1.4.</span> <span class="nav-text">PHP的几种运行模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP性能分析工具"><span class="nav-number">1.5.</span> <span class="nav-text">PHP性能分析工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP调试工具"><span class="nav-number">1.6.</span> <span class="nav-text">PHP调试工具</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#一、基础概念"><span class="nav-number">1.</span> <span class="nav-text">一、基础概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP环境"><span class="nav-number">1.1.</span> <span class="nav-text">PHP环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP-FPM"><span class="nav-number">1.2.</span> <span class="nav-text">PHP-FPM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP"><span class="nav-number">1.3.</span> <span class="nav-text">PHP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP的几种运行模式"><span class="nav-number">1.4.</span> <span class="nav-text">PHP的几种运行模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP性能分析工具"><span class="nav-number">1.5.</span> <span class="nav-text">PHP性能分析工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PHP调试工具"><span class="nav-number">1.6.</span> <span class="nav-text">PHP调试工具</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#GC机制"><span class="nav-number">1.7.</span> <span class="nav-text">GC机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本语法"><span class="nav-number">1.8.</span> <span class="nav-text">基本语法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#语法"><span class="nav-number">1.8.1.</span> <span class="nav-text">语法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#特性"><span class="nav-number">1.8.2.</span> <span class="nav-text">特性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向对象"><span class="nav-number">1.8.3.</span> <span class="nav-text">面向对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#命名空间"><span class="nav-number">1.8.4.</span> <span class="nav-text">命名空间</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SPL"><span class="nav-number">1.8.5.</span> <span class="nav-text">SPL</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#generate"><span class="nav-number">1.8.6.</span> <span class="nav-text">generate</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异常-错误处理"><span class="nav-number">1.8.7.</span> <span class="nav-text">异常/错误处理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计模式"><span class="nav-number">1.9.</span> <span class="nav-text">设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常见算法"><span class="nav-number">1.10.</span> <span class="nav-text">常见算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#psr规范"><span class="nav-number">1.11.</span> <span class="nav-text">psr规范</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#composer"><span class="nav-number">1.12.</span> <span class="nav-text">composer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#swoole"><span class="nav-number">1.13.</span> <span class="nav-text">swoole</span></a></li></ol></li></ol></div>
             
 
           </div>
