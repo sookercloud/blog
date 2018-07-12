@@ -122,14 +122,16 @@
 <meta name="keywords" content="php|mysql|docker|linux|go|nodejs|支付|游戏|">
 <meta property="og:type" content="article">
 <meta property="og:title" content="前言">
-<meta property="og:url" content="http://blog.sooker.io/2018/07/11/前言/index.html">
+<meta property="og:url" content="http://blog.sooker.io/2018/07/12/前言/index.html">
 <meta property="og:site_name" content="sooker 技术札记">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="zh">
-<meta property="og:updated_time" content="2018-07-11T13:02:35.000Z">
+<meta property="og:image" content="http://blog.sooker.io/2018/07/12/前言/553b31fd.png">
+<meta property="og:updated_time" content="2018-07-12T06:37:36.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前言">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:image" content="http://blog.sooker.io/2018/07/12/前言/553b31fd.png">
 
 
 
@@ -159,7 +161,7 @@
 
 
 
-  <link rel="canonical" href="http://blog.sooker.io/2018/07/11/前言/"/>
+  <link rel="canonical" href="http://blog.sooker.io/2018/07/12/前言/"/>
 
 
 
@@ -395,8 +397,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-11T15:02:35+02:00">
-                2018-07-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-12T08:37:36+02:00">
+                2018-07-12
               </time>
             
 
@@ -436,6 +438,7 @@
         <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 发起支付处理</span></span><br><span class="line">     <span class="keyword">$this</span>-&gt;onOrderHandler ( <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">         <span class="comment">// 配置支付编码</span></span><br><span class="line">         <span class="keyword">$this</span>-&gt;setMap ( <span class="keyword">$this</span>-&gt;_scope[ <span class="string">'paymentTypeMap'</span> ] , <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">             <span class="keyword">return</span> [</span><br><span class="line">                 <span class="keyword">parent</span>::$PAYMENT_TYPE[ <span class="string">'QQ_SCAN'</span> ][ <span class="string">'CODE'</span> ]   =&gt; [</span><br><span class="line">                     <span class="string">'paymentCode'</span> =&gt; <span class="string">'49'</span> ,</span><br><span class="line">                 ] ,</span><br><span class="line">                 <span class="keyword">parent</span>::$PAYMENT_TYPE[ <span class="string">'QQ_H5'</span> ][ <span class="string">'CODE'</span> ]   =&gt; [</span><br><span class="line">                     <span class="string">'paymentCode'</span> =&gt; <span class="string">'22'</span> ,</span><br><span class="line">                 ] ,</span><br><span class="line">                 <span class="keyword">parent</span>::$PAYMENT_TYPE[ <span class="string">'ALIPAY_H5'</span> ][ <span class="string">'CODE'</span> ] =&gt; [</span><br><span class="line">                     <span class="string">'paymentCode'</span> =&gt; <span class="string">'25'</span> ,</span><br><span class="line">                 ] ,</span><br><span class="line">             ];</span><br><span class="line">         &#125; );</span><br><span class="line">         <span class="comment">// 网银地址</span></span><br><span class="line">         <span class="keyword">$this</span>-&gt;setApiGateUrl ( <span class="string">'https://www.xgxpay.com/Pay'</span> );</span><br><span class="line"></span><br><span class="line">     &#125; );</span><br><span class="line"></span><br><span class="line">     <span class="comment">// 异步通知处理</span></span><br><span class="line">     <span class="keyword">$this</span>-&gt;onAsyncHandler ( <span class="function"><span class="keyword">function</span> <span class="params">()</span> </span>&#123;</span><br><span class="line">         <span class="comment">// 格式化异步通知数据</span></span><br><span class="line">         <span class="keyword">$this</span>-&gt;getRawJsonNotifyData ();</span><br><span class="line">         <span class="comment">// 设置异步通知成功响应字符串</span></span><br><span class="line">         <span class="keyword">$this</span>-&gt;_notifySuccessCode = <span class="string">'success'</span>;</span><br><span class="line">         <span class="comment">// 查询网关地址</span></span><br><span class="line">         <span class="keyword">$this</span>-&gt;setApiGateUrl ( <span class="string">'https:// www.xgxpay.com/Pay/orderquery'</span> );</span><br><span class="line">     &#125; );</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<p><img src="/2018/07/12/前言/553b31fd.png" alt="77777777"></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
@@ -551,7 +554,7 @@
               
                 <a href="../../../../archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
